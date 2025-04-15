@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherWise - Smart Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <h1 class="logo">WeatherWise</h1>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><button id="themeToggle" aria-label="Toggle dark/light mode">🌓</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section id="home" class="main-section">
+            <div class="weather-section">
+                <form class="search-box" id="weatherForm">
+                    <input type="text" placeholder="Enter city name" id="cityInput" required 
+                           pattern="[A-Za-z\u0080-\u024F\s]+" title="Please enter a valid city name">
+                    <button type="submit">Search</button>
+                </form>
+                
+                <div class="error" id="error" role="alert"></div>
+                
+                <article class="weather-info" id="weatherInfo">
+                    <h2 id="cityName"></h2>
+                    <div class="temperature" id="temperature"></div>
+                    <div class="description">
+                        <img src="" alt="Weather icon" id="weatherIcon" class="weather-icon">
+                        <span id="weatherDescription"></span>
+                    </div>
+                    <div class="details" id="weatherDetails"></div>
+                </article>
+            </div>
+        </section>
+
+        <section id="about" class="main-section about-section" style="display: none;">
+            <div class="weather-section">
+                <h2>About WeatherWise</h2>
+                <p>A modern weather application providing real-time updates using OpenWeatherMap API.</p>
+                <p>Features include:</p>
+                <ul>
+                    <li>Dynamic weather-based backgrounds</li>
+                    <li>Detailed weather metrics</li>
+                    <li>Light/dark theme toggle</li>
+                    <li>Responsive design</li>
+                    <li>Accurate weather forecasts</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 WeatherWise. All rights reserved.</p>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
